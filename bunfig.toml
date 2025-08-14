@@ -1,0 +1,55 @@
+# Bun configuration file
+# https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Install packages from npm registry
+registry = "https://registry.npmjs.org/"
+
+# Cache directory
+cache = "node_modules/.cache/bun"
+
+# Auto install peer dependencies
+auto = true
+
+# Faster installs
+exact = false
+
+# Production optimizations
+production = false
+
+[install.scopes]
+# Scoped package configurations can go here
+
+[run]
+# Shell to use for running scripts
+shell = "system"
+
+# Environment variables
+env = "development"
+
+[test]
+# Test runner configuration
+preload = []
+
+[build]
+# Build optimizations
+target = "browser"
+format = "esm"
+splitting = true
+minify = true
+sourcemap = true
+
+# Bundle external dependencies
+external = []
+
+# Define global variables
+define = {}
+
+# Loader configuration
+loader = { ".png" = "file", ".jpg" = "file", ".jpeg" = "file", ".gif" = "file", ".svg" = "file" }
+
+[dev]
+# Development server configuration
+port = 3000
+host = "localhost"
+hot = true
